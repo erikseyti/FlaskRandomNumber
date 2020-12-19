@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Random Number</title>
+    <link href="{{ url_for('static' ,filename='css/bootstrap.min.css') }}" rel="stylesheet" />
+</head>
+<style>
+  #rollButton
+  {
+    margin-top: 5px;
+  }
+</style>
+<body>
+
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand">Home</a>
+      </nav>
+
+    <div class="jumbotron">
+        <h1 class="display-4">Get a Random Number!</h1>
+        <p class="lead">Choose the Range of Numbers you like in the Interval.</p>
+        <hr class="my-4">
+        <p>Choose two numbers to roll between the them.</p>
+        <p class="lead">
+          <form >
+            <div class="row" >
+              <div class='col'>
+                <label>First Number</label>
+                <input class="form-control" name='firstNumber' placeholder="the first number on the range">
+              </div>
+              <div class='col'>
+                <label>Last Number</label>
+                <input class="form-control" name='lastNumber' placeholder="the first number on the range">
+              </div>
+            </div>
+          </form>
+          <a class="btn btn-success btn-lg" id="rollButton" href="#" role="button">Roll Random Number</a>
+        </p>
+      </div>
+
+
+
+<script src="{{ url_for('static' ,filename='js/jquery-3.5.1.slim.min.js') }}" ></script>
+<script src="{{ url_for('static' ,filename='js/popper.min.js') }}"></script>
+<script src="{{ url_for('static' ,filename='js/bootstrap.min.js') }}"></script>
+
+</body>
+</html>
