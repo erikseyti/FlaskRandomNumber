@@ -22,8 +22,15 @@
         <h1 class="display-4">Get a Random Number!</h1>
         <p class="lead">Choose the Range of Numbers you like in the Interval.</p>
         {% if randomNumber %}
-        <div class="alert alert-primary" role="alert"> Your number is: {{ randomNumber }} </div>
-      {% endif %}
+          <div class="alert alert-primary" role="alert"> Your number is: {{ randomNumber }} </div>
+        {% endif %}
+
+        {% if errorMensage %}
+        <div class="alert alert-danger" role="alert"> {{ errorMensage }} </div>
+        {% endif %}
+
+
+
         <hr class="my-4">
         <p>Choose two numbers to roll between the them.</p>
         <p class="lead">
@@ -31,11 +38,11 @@
             <div class="row" >
               <div class='col'>
                 <label>First Number</label>
-                <input class="form-control" name='firstNumber' placeholder="the first number on the range">
+                <input class="form-control" type="number" name='firstNumber' placeholder="the first number on the range">
               </div>
               <div class='col'>
                 <label>Last Number</label>
-                <input class="form-control" name='lastNumber' placeholder="the first number on the range">
+                <input class="form-control" type="number" name='lastNumber' placeholder="the last number on the range">
               </div>
             </div>
             <button type="submit" class="btn btn-success btn-lg" id="rollButton" href="#" role="button">Roll Random Number</button>
