@@ -21,18 +21,13 @@
     <div class="jumbotron">
         <h1 class="display-4">Get a Random Number!</h1>
         <p class="lead">Choose the Range of Numbers you like in the Interval.</p>
-        {% if randomNumber %}
-          <div class="alert alert-primary" role="alert"> Your number is: {{ randomNumber }} </div>
-        {% endif %}
 
         {% if errorMensage %}
         <div class="alert alert-danger" role="alert"> {{ errorMensage }} </div>
         {% endif %}
 
-
-
         <hr class="my-4">
-        <p>Choose two numbers to roll between the them.</p>
+        <h3>Choose two numbers to roll between the them.</h3>
         <p class="lead">
           <form method='POST'>
             <div class="row" >
@@ -47,6 +42,10 @@
             </div>
             <button type="submit" class="btn btn-success btn-lg" id="rollButton" href="#" role="button">Roll Random Number</button>
           </form>
+          {% if randomNumber %}
+          <br>
+          <div class="alert alert-primary" role="alert"> Your number is: {{ randomNumber }} </div>
+        {% endif %}
         </p>
       </div>
 
